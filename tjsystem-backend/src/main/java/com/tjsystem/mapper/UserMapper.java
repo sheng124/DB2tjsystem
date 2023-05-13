@@ -11,6 +11,6 @@ public interface UserMapper {
     @Select("select id,user_name userName,password from userinfo where user_name = #{userName} and password = #{password}")
     User getByUsernameAndPassword(User user);
 
-    @Update("insert into userinfo(user_name,password) VALUES (#{user_name},#{password})")
+    @Update("insert into userinfo(user_name,password) VALUES (#{userName},#{password})")
     boolean insertUserInfo(User user);
 }
