@@ -127,15 +127,15 @@ export default {
       if (this.myRegisterValiate()) {
         register(this.registerData).then((result) => {
           console.log(result)
-          if (result.data.code === 1) {
+          if (result.code === 1) {
             console.log('register success')
-            this.$message.success(result.data.msg)
+            this.$message.success(result.msg)
             this.registerData.userName = ''
             this.registerData.password = ''
             this.registerData.password_confirm = ''
             this.signInClick()
           } else {
-            this.$message.error(result.data.msg)
+            this.$message.error(result.msg)
             this.loading = false
           }
         })

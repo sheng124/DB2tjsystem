@@ -13,7 +13,8 @@ export function register(data) {
   return request({
     url: '/register',
     method: 'post',
-    data
+    data,
+    baseURL: 'http://localhost:8080'
   })
 }
 
