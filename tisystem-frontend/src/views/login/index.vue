@@ -10,7 +10,7 @@
             class="form"
           >
             <h2 class="form__title">注 册</h2>
-            <input v-model="registerData.username" type="text" placeholder="用户名" class="input">
+            <input v-model="registerData.userName" type="text" placeholder="用户名" class="input">
             <input v-model="registerData.password" type="password" placeholder="密码" class="input">
             <input v-model="registerData.password_confirm" type="password" placeholder="确认密码" class="input">
             <button class="btn" @click.prevent="register">注 册</button>
@@ -60,7 +60,7 @@ export default {
         password: ''
       },
       registerData: {
-        username: '',
+        userName: '',
         password: '',
         password_confirm: ''
       },
@@ -85,7 +85,7 @@ export default {
       container.classList.add('right-panel-active')
     },
     myRegisterValiate() {
-      if (this.registerData.username === '') {
+      if (this.registerData.userName === '') {
         this.$message.error('请输入用户名！')
         return false
       } else if (this.registerData.password === '') {
@@ -130,7 +130,7 @@ export default {
           if (result.data.code === 1) {
             console.log('register success')
             this.$message.success(result.data.msg)
-            this.registerData.username = ''
+            this.registerData.userName = ''
             this.registerData.password = ''
             this.registerData.password_confirm = ''
             this.signInClick()
