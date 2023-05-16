@@ -3,6 +3,7 @@
     <logo v-if="showLogo" :collapse="isCollapse" />
     <el-scrollbar wrap-class="scrollbar-wrapper">
       <el-menu
+        router="true"
         :default-active="activeMenu"
         :collapse="isCollapse"
         :background-color="variables.menuBg"
@@ -12,7 +13,27 @@
         :collapse-transition="false"
         mode="vertical"
       >
-        <sidebar-item v-for="route in routes" :key="route.path" :item="route" :base-path="route.path" />
+        <!-- <sidebar-item v-for="route in routes" :key="route.path" :item="route" :base-path="route.path" /> -->
+        <el-menu-item index="0">
+          <i class="el-icon-menu" />
+          <span slot="title">首页</span>
+        </el-menu-item>
+        <el-menu-item index="1">
+          <i class="el-icon-menu" />
+          <span slot="title">签到</span>
+        </el-menu-item>
+        <el-submenu index="2">
+          <template slot="title">
+            <i class="el-icon-location" />
+            <span slot="title">体检管理</span>
+          </template>
+          <el-menu-item index="2-1">检查</el-menu-item>
+          <el-menu-item index="2-2">上传结果</el-menu-item>
+        </el-submenu>
+        <el-menu-item index="3">
+          <i class="el-icon-menu" />
+          <span slot="title">项目管理</span>
+        </el-menu-item>
       </el-menu>
     </el-scrollbar>
   </div>
@@ -21,17 +42,17 @@
 <script>
 import { mapGetters } from 'vuex'
 import Logo from './Logo'
-import SidebarItem from './SidebarItem'
+// import SidebarItem from './SidebarItem'
 import variables from '@/styles/variables.scss'
 
 export default {
-  components: { SidebarItem, Logo },
+  components: { Logo },
   computed: {
     ...mapGetters([
       'sidebar'
     ]),
     routes() {
-      return this.$router.options.routes
+      return this.$router.options.routes // 当前路由配置
     },
     activeMenu() {
       const route = this.$route

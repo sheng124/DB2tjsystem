@@ -778,7 +778,7 @@ true posixrules
       <ObjectId>14727</ObjectId>
       <Comment>default administrative connection database</Comment>
       <Owner>omm</Owner>
-      <IntrospectionStateNumber>14472</IntrospectionStateNumber>
+      <IntrospectionStateNumber>14639</IntrospectionStateNumber>
       <Current>1</Current>
     </database>
     <database id="5" parent="1" name="school">
@@ -920,7 +920,7 @@ true posixrules
       <ObjectId>16478</ObjectId>
       <StateNumber>13240</StateNumber>
       <Owner>test</Owner>
-      <IntrospectionStateNumber>14473</IntrospectionStateNumber>
+      <IntrospectionStateNumber>14640</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <foreign-data-wrapper id="34" parent="4" name="dist_fdw">
@@ -1078,7 +1078,7 @@ true posixrules
     <table id="61" parent="33" name="Department">
       <ObjectId>16510</ObjectId>
       <Owner>test</Owner>
-      <StateNumber>13744</StateNumber>
+      <StateNumber>14523</StateNumber>
     </table>
     <table id="62" parent="33" name="Discount">
       <ObjectId>16544</ObjectId>
@@ -1088,7 +1088,7 @@ true posixrules
     <table id="63" parent="33" name="Doctor">
       <ObjectId>16523</ObjectId>
       <Owner>test</Owner>
-      <StateNumber>13744</StateNumber>
+      <StateNumber>14516</StateNumber>
     </table>
     <table id="64" parent="33" name="Indicator">
       <ObjectId>16605</ObjectId>
@@ -1098,7 +1098,7 @@ true posixrules
     <table id="65" parent="33" name="Order">
       <ObjectId>16625</ObjectId>
       <Owner>test</Owner>
-      <StateNumber>13850</StateNumber>
+      <StateNumber>14627</StateNumber>
     </table>
     <table id="66" parent="33" name="Patient">
       <ObjectId>16592</ObjectId>
@@ -1120,98 +1120,108 @@ true posixrules
       <Owner>test</Owner>
       <StateNumber>13785</StateNumber>
     </table>
-    <table id="70" parent="33" name="userinfo">
-      <ObjectId>16694</ObjectId>
+    <table id="70" parent="33" name="lineup">
+      <ObjectId>16709</ObjectId>
       <Owner>test</Owner>
-      <StateNumber>14462</StateNumber>
+      <StateNumber>14553</StateNumber>
     </table>
-    <server id="71" parent="34" name="gsmpp_server">
+    <table id="71" parent="33" name="reservelimit">
+      <ObjectId>16714</ObjectId>
+      <Owner>test</Owner>
+      <StateNumber>14596</StateNumber>
+    </table>
+    <table id="72" parent="33" name="userinfo">
+      <ObjectId>16704</ObjectId>
+      <Owner>test</Owner>
+      <StateNumber>14548</StateNumber>
+    </table>
+    <server id="73" parent="34" name="gsmpp_server">
       <ObjectId>14011</ObjectId>
       <StateNumber>2</StateNumber>
       <Owner>omm</Owner>
     </server>
-    <server id="72" parent="35" name="gsmpp_errorinfo_server">
+    <server id="74" parent="35" name="gsmpp_errorinfo_server">
       <ObjectId>14016</ObjectId>
       <StateNumber>2</StateNumber>
       <Owner>omm</Owner>
     </server>
-    <server id="73" parent="36" name="log_srv">
+    <server id="75" parent="36" name="log_srv">
       <ObjectId>14021</ObjectId>
       <StateNumber>2</StateNumber>
       <Owner>omm</Owner>
     </server>
-    <server id="74" parent="37" name="mot_server">
+    <server id="76" parent="37" name="mot_server">
       <ObjectId>14063</ObjectId>
       <StateNumber>2</StateNumber>
       <Owner>omm</Owner>
     </server>
-    <column id="75" parent="59" name="Combo_id">
+    <column id="77" parent="59" name="Combo_id">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>13771</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="76" parent="59" name="Combo_name">
+    <column id="78" parent="59" name="Combo_name">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>13771</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="77" parent="59" name="Combo_price">
+    <column id="79" parent="59" name="Combo_price">
       <Position>3</Position>
       <DataType>double precision|0s</DataType>
       <StateNumber>13771</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="78" parent="59" name="Combo_apt-age">
+    <column id="80" parent="59" name="Combo_apt-age">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>14092</StateNumber>
+      <StateNumber>14504</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="79" parent="59" name="Combo_apt-gender">
+    <column id="81" parent="59" name="Combo_apt-gender">
       <Position>5</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>14093</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="80" parent="59" name="Combo_sales">
+    <column id="82" parent="59" name="Combo_sales">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>14160</StateNumber>
       <DefaultExpression>0</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <index id="81" parent="59" name="Combo_pk">
+    <index id="83" parent="59" name="Combo_pk">
       <ObjectId>16572</ObjectId>
       <StateNumber>13771</StateNumber>
       <ColNames>Combo_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="82" parent="59" name="Combo_pk">
+    <key id="84" parent="59" name="Combo_pk">
       <ObjectId>16573</ObjectId>
       <StateNumber>13771</StateNumber>
       <ColNames>Combo_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>Combo_pk</UnderlyingIndexName>
     </key>
-    <column id="83" parent="60" name="Combo-Project_combo-id">
+    <column id="85" parent="60" name="Combo-Project_combo-id">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>13778</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="84" parent="60" name="Combo-Project_project-id">
+    <column id="86" parent="60" name="Combo-Project_project-id">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>13778</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="85" parent="60" name="Combo-Project_pk">
+    <index id="87" parent="60" name="Combo-Project_pk">
       <ObjectId>16580</ObjectId>
       <StateNumber>13778</StateNumber>
       <ColNames>Combo-Project_combo-id
@@ -1219,7 +1229,7 @@ Combo-Project_project-id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="86" parent="60" name="Combo-Project_pk">
+    <key id="88" parent="60" name="Combo-Project_pk">
       <ObjectId>16581</ObjectId>
       <StateNumber>13778</StateNumber>
       <ColNames>Combo-Project_combo-id
@@ -1227,7 +1237,7 @@ Combo-Project_project-id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>Combo-Project_pk</UnderlyingIndexName>
     </key>
-    <foreign-key id="87" parent="60" name="Combo-Project_Combo_Combo_id_fk">
+    <foreign-key id="89" parent="60" name="Combo-Project_Combo_Combo_id_fk">
       <ObjectId>16582</ObjectId>
       <StateNumber>13778</StateNumber>
       <ColNames>Combo-Project_combo-id</ColNames>
@@ -1237,7 +1247,7 @@ Combo-Project_project-id</ColNames>
       <RefKeyName>Combo_pk</RefKeyName>
       <RefColNames>Combo_id</RefColNames>
     </foreign-key>
-    <foreign-key id="88" parent="60" name="Combo-Project_Project_Project_id_fk">
+    <foreign-key id="90" parent="60" name="Combo-Project_Project_Project_id_fk">
       <ObjectId>16587</ObjectId>
       <StateNumber>13778</StateNumber>
       <ColNames>Combo-Project_project-id</ColNames>
@@ -1247,118 +1257,130 @@ Combo-Project_project-id</ColNames>
       <RefKeyName>Project_pk</RefKeyName>
       <RefColNames>Project_id</RefColNames>
     </foreign-key>
-    <column id="89" parent="61" name="Department_id">
+    <column id="91" parent="61" name="Department_id">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>13730</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="90" parent="61" name="Department_name">
+    <column id="92" parent="61" name="Department_name">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>13730</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="91" parent="61" name="Department_address">
+    <column id="93" parent="61" name="Department_address">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>13730</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="92" parent="61" name="Department_pk">
+    <column id="94" parent="61" name="Department_phone">
+      <Position>4</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>14523</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="95" parent="61" name="Department_pk">
       <ObjectId>16516</ObjectId>
-      <StateNumber>13730</StateNumber>
+      <StateNumber>14523</StateNumber>
       <ColNames>Department_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="93" parent="61" name="Department_pk">
+    <key id="96" parent="61" name="Department_pk">
       <ObjectId>16517</ObjectId>
       <StateNumber>13730</StateNumber>
       <ColNames>Department_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>Department_pk</UnderlyingIndexName>
     </key>
-    <column id="94" parent="62" name="Discount_id">
+    <column id="97" parent="62" name="Discount_id">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>13760</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="95" parent="62" name="Discount_minnum">
+    <column id="98" parent="62" name="Discount_minnum">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>13760</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="96" parent="62" name="Discount_maxnum">
+    <column id="99" parent="62" name="Discount_maxnum">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>13768</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="97" parent="62" name="Discount_range">
+    <column id="100" parent="62" name="Discount_range">
       <Position>4</Position>
       <DataType>double precision|0s</DataType>
       <StateNumber>13760</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <index id="98" parent="62" name="Discount_pk">
+    <index id="101" parent="62" name="Discount_pk">
       <ObjectId>16550</ObjectId>
       <StateNumber>13768</StateNumber>
       <ColNames>Discount_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="99" parent="62" name="Discount_pk">
+    <key id="102" parent="62" name="Discount_pk">
       <ObjectId>16551</ObjectId>
       <StateNumber>13760</StateNumber>
       <ColNames>Discount_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>Discount_pk</UnderlyingIndexName>
     </key>
-    <column id="100" parent="63" name="Doctor_id">
+    <column id="103" parent="63" name="Doctor_id">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>13744</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="101" parent="63" name="Doctor_name">
+    <column id="104" parent="63" name="Doctor_name">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>13744</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="102" parent="63" name="Doctor_position">
+    <column id="105" parent="63" name="Doctor_position">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>13744</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="103" parent="63" name="Doctor_department-id">
+    <column id="106" parent="63" name="Doctor_department-id">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>13744</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="104" parent="63" name="Doctor_pk">
+    <column id="107" parent="63" name="Doctor_gender">
+      <Position>5</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>14516</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="108" parent="63" name="Doctor_pk">
       <ObjectId>16529</ObjectId>
       <StateNumber>13744</StateNumber>
       <ColNames>Doctor_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="105" parent="63" name="Doctor_pk">
+    <key id="109" parent="63" name="Doctor_pk">
       <ObjectId>16530</ObjectId>
       <StateNumber>13744</StateNumber>
       <ColNames>Doctor_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>Doctor_pk</UnderlyingIndexName>
     </key>
-    <foreign-key id="106" parent="63" name="Doctor_Department_Department_id_fk">
+    <foreign-key id="110" parent="63" name="Doctor_Department_Department_id_fk">
       <ObjectId>16531</ObjectId>
       <StateNumber>13744</StateNumber>
       <ColNames>Doctor_department-id</ColNames>
@@ -1368,58 +1390,58 @@ Combo-Project_project-id</ColNames>
       <RefKeyName>Department_pk</RefKeyName>
       <RefColNames>Department_id</RefColNames>
     </foreign-key>
-    <column id="107" parent="64" name="Indicator_name">
+    <column id="111" parent="64" name="Indicator_name">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>13788</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="108" parent="64" name="Indicator_project-id">
+    <column id="112" parent="64" name="Indicator_project-id">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>13788</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="109" parent="64" name="Indicator_min">
+    <column id="113" parent="64" name="Indicator_min">
       <Position>3</Position>
       <DataType>double precision|0s</DataType>
       <StateNumber>13817</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="110" parent="64" name="Indicator_max">
+    <column id="114" parent="64" name="Indicator_max">
       <Position>4</Position>
       <DataType>double precision|0s</DataType>
       <StateNumber>13818</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="111" parent="64" name="Indicator_unit">
+    <column id="115" parent="64" name="Indicator_unit">
       <Position>6</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>13812</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="112" parent="64" name="Indicator_evaluation">
+    <column id="116" parent="64" name="Indicator_evaluation">
       <Position>7</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>13803</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="113" parent="64" name="Indicator_pk">
+    <index id="117" parent="64" name="Indicator_pk">
       <ObjectId>16611</ObjectId>
       <StateNumber>13812</StateNumber>
       <ColNames>Indicator_name</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="114" parent="64" name="Indicator_pk">
+    <key id="118" parent="64" name="Indicator_pk">
       <ObjectId>16612</ObjectId>
       <StateNumber>13788</StateNumber>
       <ColNames>Indicator_name</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>Indicator_pk</UnderlyingIndexName>
     </key>
-    <foreign-key id="115" parent="64" name="Indicator_Project_Project_id_fk">
+    <foreign-key id="119" parent="64" name="Indicator_Project_Project_id_fk">
       <ObjectId>16613</ObjectId>
       <StateNumber>13788</StateNumber>
       <ColNames>Indicator_project-id</ColNames>
@@ -1429,49 +1451,52 @@ Combo-Project_project-id</ColNames>
       <RefKeyName>Project_pk</RefKeyName>
       <RefColNames>Project_id</RefColNames>
     </foreign-key>
-    <column id="116" parent="65" name="Order_id">
+    <column id="120" parent="65" name="Order_id">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>13850</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="117" parent="65" name="Order_patient-id">
+    <column id="121" parent="65" name="Order_patient-id">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>13850</StateNumber>
+      <NotNull>1</NotNull>
+      <StateNumber>14624</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="118" parent="65" name="Order_project/combo-id">
+    <column id="122" parent="65" name="Order_project/combo-id">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>13850</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="119" parent="65" name="Order_date">
+    <column id="123" parent="65" name="Order_date">
       <Position>4</Position>
-      <DataType>timestamp(0)|0s</DataType>
-      <StateNumber>13850</StateNumber>
-      <TypeId>1114</TypeId>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>14627</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
-    <index id="120" parent="65" name="Order_pk">
-      <ObjectId>16631</ObjectId>
-      <StateNumber>13850</StateNumber>
+    <index id="124" parent="65" name="Order_pk">
+      <ObjectId>16719</ObjectId>
+      <StateNumber>14627</StateNumber>
       <ColNames>Order_id
-Order_project/combo-id</ColNames>
+Order_project/combo-id
+Order_patient-id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="121" parent="65" name="Order_pk">
-      <ObjectId>16632</ObjectId>
-      <StateNumber>13850</StateNumber>
+    <key id="125" parent="65" name="Order_pk">
+      <ObjectId>16720</ObjectId>
+      <StateNumber>14624</StateNumber>
       <ColNames>Order_id
-Order_project/combo-id</ColNames>
+Order_project/combo-id
+Order_patient-id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>Order_pk</UnderlyingIndexName>
     </key>
-    <foreign-key id="122" parent="65" name="Order_Patient_Patient_id_fk">
+    <foreign-key id="126" parent="65" name="Order_Patient_Patient_id_fk">
       <ObjectId>16633</ObjectId>
       <StateNumber>13850</StateNumber>
       <ColNames>Order_patient-id</ColNames>
@@ -1481,84 +1506,64 @@ Order_project/combo-id</ColNames>
       <RefKeyName>Patient_pk</RefKeyName>
       <RefColNames>Patient_id</RefColNames>
     </foreign-key>
-    <foreign-key id="123" parent="65" name="Order_Combo_Combo_id_fk">
-      <ObjectId>16638</ObjectId>
-      <StateNumber>13850</StateNumber>
-      <ColNames>Order_project/combo-id</ColNames>
-      <RefTableId>16566</RefTableId>
-      <RefColPositions>1</RefColPositions>
-      <RefTableName>Combo</RefTableName>
-      <RefKeyName>Combo_pk</RefKeyName>
-      <RefColNames>Combo_id</RefColNames>
-    </foreign-key>
-    <foreign-key id="124" parent="65" name="Order_Project_Project_id_fk">
-      <ObjectId>16643</ObjectId>
-      <StateNumber>13850</StateNumber>
-      <ColNames>Order_project/combo-id</ColNames>
-      <RefTableId>16502</RefTableId>
-      <RefColPositions>1</RefColPositions>
-      <RefTableName>Project</RefTableName>
-      <RefKeyName>Project_pk</RefKeyName>
-      <RefColNames>Project_id</RefColNames>
-    </foreign-key>
-    <column id="125" parent="66" name="Patient_id">
+    <column id="127" parent="66" name="Patient_id">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>13785</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="126" parent="66" name="Patient_name">
+    <column id="128" parent="66" name="Patient_name">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>13785</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="127" parent="66" name="Patient_gender">
+    <column id="129" parent="66" name="Patient_gender">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>13785</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="128" parent="66" name="Patient_age">
+    <column id="130" parent="66" name="Patient_age">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>13785</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="129" parent="66" name="Patient_phone">
+    <column id="131" parent="66" name="Patient_phone">
       <Position>5</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>13785</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="130" parent="66" name="Patient_id-card">
+    <column id="132" parent="66" name="Patient_id-card">
       <Position>6</Position>
       <DataType>char|0s</DataType>
       <StateNumber>13785</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="131" parent="66" name="Patient_team-id">
+    <column id="133" parent="66" name="Patient_team-id">
       <Position>7</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>13785</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="132" parent="66" name="Patient_pk">
+    <index id="134" parent="66" name="Patient_pk">
       <ObjectId>16598</ObjectId>
       <StateNumber>13785</StateNumber>
       <ColNames>Patient_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="133" parent="66" name="Patient_pk">
+    <key id="135" parent="66" name="Patient_pk">
       <ObjectId>16599</ObjectId>
       <StateNumber>13785</StateNumber>
       <ColNames>Patient_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>Patient_pk</UnderlyingIndexName>
     </key>
-    <foreign-key id="134" parent="66" name="Patient_Team_Team_id_fk">
+    <foreign-key id="136" parent="66" name="Patient_Team_Team_id_fk">
       <ObjectId>16600</ObjectId>
       <StateNumber>13785</StateNumber>
       <ColNames>Patient_team-id</ColNames>
@@ -1568,66 +1573,66 @@ Order_project/combo-id</ColNames>
       <RefKeyName>Team_pk</RefKeyName>
       <RefColNames>Team_id</RefColNames>
     </foreign-key>
-    <column id="135" parent="67" name="Project_id">
+    <column id="137" parent="67" name="Project_id">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>13727</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="136" parent="67" name="Project_name">
+    <column id="138" parent="67" name="Project_name">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>13727</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="137" parent="67" name="Project_price">
+    <column id="139" parent="67" name="Project_price">
       <Position>3</Position>
       <DataType>double precision|0s</DataType>
       <StateNumber>13727</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="138" parent="67" name="Project_department-id">
+    <column id="140" parent="67" name="Project_department-id">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>13727</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="139" parent="67" name="Project_pk">
+    <index id="141" parent="67" name="Project_pk">
       <ObjectId>16508</ObjectId>
       <StateNumber>13727</StateNumber>
       <ColNames>Project_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="140" parent="67" name="Project_pk">
+    <key id="142" parent="67" name="Project_pk">
       <ObjectId>16509</ObjectId>
       <StateNumber>13727</StateNumber>
       <ColNames>Project_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>Project_pk</UnderlyingIndexName>
     </key>
-    <column id="141" parent="68" name="Result_patient-id">
+    <column id="143" parent="68" name="Result_patient-id">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>13853</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="142" parent="68" name="Result_indicator-name">
+    <column id="144" parent="68" name="Result_indicator-name">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>13853</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="143" parent="68" name="Result_value">
+    <column id="145" parent="68" name="Result_value">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>13853</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="144" parent="68" name="Result_pk">
+    <index id="146" parent="68" name="Result_pk">
       <ObjectId>16654</ObjectId>
       <StateNumber>13853</StateNumber>
       <ColNames>Result_patient-id
@@ -1635,7 +1640,7 @@ Result_indicator-name</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="145" parent="68" name="Result_pk">
+    <key id="147" parent="68" name="Result_pk">
       <ObjectId>16655</ObjectId>
       <StateNumber>13853</StateNumber>
       <ColNames>Result_patient-id
@@ -1643,7 +1648,7 @@ Result_indicator-name</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>Result_pk</UnderlyingIndexName>
     </key>
-    <foreign-key id="146" parent="68" name="Result_Patient_Patient_id_fk">
+    <foreign-key id="148" parent="68" name="Result_Patient_Patient_id_fk">
       <ObjectId>16656</ObjectId>
       <StateNumber>13853</StateNumber>
       <ColNames>Result_patient-id</ColNames>
@@ -1653,7 +1658,7 @@ Result_indicator-name</ColNames>
       <RefKeyName>Patient_pk</RefKeyName>
       <RefColNames>Patient_id</RefColNames>
     </foreign-key>
-    <foreign-key id="147" parent="68" name="Result_Indicator_Indicator_name_fk">
+    <foreign-key id="149" parent="68" name="Result_Indicator_Indicator_name_fk">
       <ObjectId>16661</ObjectId>
       <StateNumber>13853</StateNumber>
       <ColNames>Result_indicator-name</ColNames>
@@ -1663,51 +1668,129 @@ Result_indicator-name</ColNames>
       <RefKeyName>Indicator_pk</RefKeyName>
       <RefColNames>Indicator_name</RefColNames>
     </foreign-key>
-    <column id="148" parent="69" name="Team_id">
+    <column id="150" parent="69" name="Team_id">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>13757</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="149" parent="69" name="Team_num">
+    <column id="151" parent="69" name="Team_num">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>13757</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="150" parent="69" name="Team_pk">
+    <index id="152" parent="69" name="Team_pk">
       <ObjectId>16542</ObjectId>
       <StateNumber>13757</StateNumber>
       <ColNames>Team_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="151" parent="69" name="Team_pk">
+    <key id="153" parent="69" name="Team_pk">
       <ObjectId>16543</ObjectId>
       <StateNumber>13757</StateNumber>
       <ColNames>Team_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>Team_pk</UnderlyingIndexName>
     </key>
-    <column id="152" parent="70" name="id">
+    <column id="154" parent="70" name="patient_id">
       <Position>1</Position>
-      <DataType>integer|0s</DataType>
-      <StateNumber>14462</StateNumber>
-      <TypeId>23</TypeId>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>14553</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
-    <column id="153" parent="70" name="user_name">
+    <column id="155" parent="70" name="current_department_id">
       <Position>2</Position>
       <DataType>varchar(10)|0s</DataType>
-      <StateNumber>14462</StateNumber>
+      <StateNumber>14553</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="154" parent="70" name="password">
+    <column id="156" parent="70" name="lineup_time">
       <Position>3</Position>
+      <DataType>time|0s</DataType>
+      <StateNumber>14553</StateNumber>
+      <TypeId>1083</TypeId>
+    </column>
+    <index id="157" parent="70" name="lineup_pkey">
+      <ObjectId>16712</ObjectId>
+      <StateNumber>14553</StateNumber>
+      <ColNames>patient_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="158" parent="70" name="lineup_pkey">
+      <ObjectId>16713</ObjectId>
+      <StateNumber>14553</StateNumber>
+      <ColNames>patient_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>lineup_pkey</UnderlyingIndexName>
+    </key>
+    <column id="159" parent="71" name="reserve_date">
+      <Position>1</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>14596</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="160" parent="71" name="reserve_time">
+      <Position>2</Position>
+      <DataType>time|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>14596</StateNumber>
+      <TypeId>1083</TypeId>
+    </column>
+    <column id="161" parent="71" name="limit_count">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>14596</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="162" parent="71" name="reservelimit_pkey">
+      <ObjectId>16717</ObjectId>
+      <StateNumber>14596</StateNumber>
+      <ColNames>reserve_date
+reserve_time</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="163" parent="71" name="reservelimit_pkey">
+      <ObjectId>16718</ObjectId>
+      <StateNumber>14596</StateNumber>
+      <ColNames>reserve_date
+reserve_time</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>reservelimit_pkey</UnderlyingIndexName>
+    </key>
+    <column id="164" parent="72" name="user_name">
+      <Position>1</Position>
       <DataType>varchar(10)|0s</DataType>
-      <StateNumber>14462</StateNumber>
+      <NotNull>1</NotNull>
+      <StateNumber>14548</StateNumber>
       <TypeId>1043</TypeId>
     </column>
+    <column id="165" parent="72" name="password">
+      <Position>2</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <StateNumber>14548</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="166" parent="72" name="userinfo_pkey">
+      <ObjectId>16707</ObjectId>
+      <StateNumber>14548</StateNumber>
+      <ColNames>user_name</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="167" parent="72" name="userinfo_pkey">
+      <ObjectId>16708</ObjectId>
+      <StateNumber>14548</StateNumber>
+      <ColNames>user_name</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>userinfo_pkey</UnderlyingIndexName>
+    </key>
   </database-model>
 </dataSource>
