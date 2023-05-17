@@ -778,7 +778,7 @@ true posixrules
       <ObjectId>14727</ObjectId>
       <Comment>default administrative connection database</Comment>
       <Owner>omm</Owner>
-      <IntrospectionStateNumber>14639</IntrospectionStateNumber>
+      <IntrospectionStateNumber>14658</IntrospectionStateNumber>
       <Current>1</Current>
     </database>
     <database id="5" parent="1" name="school">
@@ -920,7 +920,7 @@ true posixrules
       <ObjectId>16478</ObjectId>
       <StateNumber>13240</StateNumber>
       <Owner>test</Owner>
-      <IntrospectionStateNumber>14640</IntrospectionStateNumber>
+      <IntrospectionStateNumber>14659</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <foreign-data-wrapper id="34" parent="4" name="dist_fdw">
@@ -1126,9 +1126,9 @@ true posixrules
       <StateNumber>14553</StateNumber>
     </table>
     <table id="71" parent="33" name="reservelimit">
-      <ObjectId>16714</ObjectId>
+      <ObjectId>16733</ObjectId>
       <Owner>test</Owner>
-      <StateNumber>14596</StateNumber>
+      <StateNumber>14653</StateNumber>
     </table>
     <table id="72" parent="33" name="userinfo">
       <ObjectId>16704</ObjectId>
@@ -1731,35 +1731,35 @@ Result_indicator-name</ColNames>
     </key>
     <column id="159" parent="71" name="reserve_date">
       <Position>1</Position>
-      <DataType>timestamp(0)|0s</DataType>
+      <DataType>char(10)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>14596</StateNumber>
-      <TypeId>1114</TypeId>
+      <StateNumber>14653</StateNumber>
+      <TypeId>1042</TypeId>
     </column>
     <column id="160" parent="71" name="reserve_time">
       <Position>2</Position>
-      <DataType>time|0s</DataType>
+      <DataType>char(8)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>14596</StateNumber>
-      <TypeId>1083</TypeId>
+      <StateNumber>14653</StateNumber>
+      <TypeId>1042</TypeId>
     </column>
     <column id="161" parent="71" name="limit_count">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>14596</StateNumber>
+      <StateNumber>14653</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <index id="162" parent="71" name="reservelimit_pkey">
-      <ObjectId>16717</ObjectId>
-      <StateNumber>14596</StateNumber>
+      <ObjectId>16736</ObjectId>
+      <StateNumber>14653</StateNumber>
       <ColNames>reserve_date
 reserve_time</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
     <key id="163" parent="71" name="reservelimit_pkey">
-      <ObjectId>16718</ObjectId>
-      <StateNumber>14596</StateNumber>
+      <ObjectId>16737</ObjectId>
+      <StateNumber>14653</StateNumber>
       <ColNames>reserve_date
 reserve_time</ColNames>
       <Primary>1</Primary>
