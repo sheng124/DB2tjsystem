@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Maven: org.assertj:assertj-core:3.22.0">
+  <library name="Maven: org.assertj:assertj-core:3.22.0" type="java-imported">
+    <properties groupId="org.assertj" artifactId="assertj-core" version="3.22.0" />
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../maven/apache-maven-3.6.1/mvn_resp/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.jar!/" />
     </CLASSES>

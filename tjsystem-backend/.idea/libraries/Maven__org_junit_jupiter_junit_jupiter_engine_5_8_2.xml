@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Maven: org.junit.jupiter:junit-jupiter-engine:5.8.2">
+  <library name="Maven: org.junit.jupiter:junit-jupiter-engine:5.8.2" type="java-imported">
+    <properties groupId="org.junit.jupiter" artifactId="junit-jupiter-engine" version="5.8.2" />
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../maven/apache-maven-3.6.1/mvn_resp/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar!/" />
     </CLASSES>

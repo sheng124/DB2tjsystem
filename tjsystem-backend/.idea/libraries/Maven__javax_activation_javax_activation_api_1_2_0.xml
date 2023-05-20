@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Maven: javax.activation:javax.activation-api:1.2.0">
+  <library name="Maven: javax.activation:javax.activation-api:1.2.0" type="java-imported">
+    <properties groupId="javax.activation" artifactId="javax.activation-api" version="1.2.0" />
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../maven/apache-maven-3.6.1/mvn_resp/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/" />
     </CLASSES>

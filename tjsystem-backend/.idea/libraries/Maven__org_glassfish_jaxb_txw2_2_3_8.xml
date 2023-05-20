@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Maven: org.glassfish.jaxb:txw2:2.3.8">
+  <library name="Maven: org.glassfish.jaxb:txw2:2.3.8" type="java-imported">
+    <properties groupId="org.glassfish.jaxb" artifactId="txw2" version="2.3.8" />
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../maven/apache-maven-3.6.1/mvn_resp/org/glassfish/jaxb/txw2/2.3.8/txw2-2.3.8.jar!/" />
     </CLASSES>
