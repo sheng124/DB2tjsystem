@@ -1,9 +1,6 @@
 package com.tjsystem.mapper;
 
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -36,4 +33,8 @@ public interface SignInAndLineUpMapper {
     @Update("update \"Lineup\" set \"Current_department_id\" = #{Department_id},\"Lineup_time\" = #{time}::time " +
             "where \"Patient_id\" = #{Patient_id};")
     boolean UpdateQueue(String Patient_id, String Department_id, String time);
+
+    //检查完成
+    @Delete("delete from \"Lineup\" where \"Patient_id\" = #{Patient_id};")
+    boolean CheckOver(String Patient_id);
 }
