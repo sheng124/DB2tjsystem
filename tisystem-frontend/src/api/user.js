@@ -34,3 +34,39 @@ export function logout() {
     baseURL: 'http://localhost:8080'
   })
 }
+
+export function getCheckInfo(data) {
+  return request({
+    url: '/userCheckInfo',
+    method: 'get',
+    params: { data },
+    baseURL: 'http://localhost:8080'
+  })
+}
+
+export function setCheckState(data) {
+  return request({
+    url: '/setCheckState',
+    method: 'put',
+    params: { data },
+    baseURL: 'http://localhost:8080'
+  })
+}
+
+export function getUploadInfo(Doctor_id) {
+  return request({
+    url: '/userUploadInfo',
+    method: 'get',
+    params: { Doctor_id },
+    baseURL: 'http://localhost:8080'
+  })
+}
+
+export function uploadFormData(data) {
+  return request({
+    url: '/uploadFormData',
+    method: 'put',
+    data,
+    baseURL: 'http://localhost:8080'
+  })
+}

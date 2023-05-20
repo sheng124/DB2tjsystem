@@ -4,6 +4,7 @@
     <el-scrollbar wrap-class="scrollbar-wrapper">
       <el-menu
         router="true"
+        class="el-menu-vertical-demo"
         :default-active="activeMenu"
         :collapse="isCollapse"
         :background-color="variables.menuBg"
@@ -27,10 +28,10 @@
             <i class="el-icon-location" />
             <span slot="title">体检管理</span>
           </template>
-          <el-menu-item index="2-1">检查</el-menu-item>
-          <el-menu-item index="2-2">上传结果</el-menu-item>
+          <el-menu-item index="/tjManage01">检查</el-menu-item>
+          <el-menu-item index="/tjManage02">上传结果</el-menu-item>
         </el-submenu>
-        <el-menu-item index="3">
+        <el-menu-item index="/proManage">
           <i class="el-icon-menu" />
           <span slot="title">项目管理</span>
         </el-menu-item>
@@ -71,6 +72,15 @@ export default {
     },
     isCollapse() {
       return !this.sidebar.opened
+    }
+  },
+  methods: {
+    judgeCheck() {
+      if (this.$route.path === '/check') {
+        this.$message.error('高亮')
+      } else {
+        this.$message.error('不高亮')
+      }
     }
   }
 }

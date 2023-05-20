@@ -8,9 +8,9 @@ import org.apache.ibatis.annotations.Update;
 @Mapper
 public interface UserMapper {
 
-    @Select("select user_name userName,password from userinfo where user_name = #{userName} and password = #{password}")
+    @Select("select \"User_name\" userName,\"Password\" from \"Userinfo\" where \"User_name\" = #{userName} and \"Password\" = #{password}")
     User getByUsernameAndPassword(User user);
 
-    @Update("insert into userinfo(user_name,password) VALUES (#{userName},#{password})")
+    @Update("insert into \"Userinfo\"(\"User_name\",\"Password\") VALUES (#{userName},#{password})")
     boolean insertUserInfo(User user);
 }
