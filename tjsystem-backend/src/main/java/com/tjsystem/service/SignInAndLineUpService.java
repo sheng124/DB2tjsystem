@@ -4,8 +4,8 @@ import com.tjsystem.pojo.QueueInfo;
 
 public interface SignInAndLineUpService {
 
-    boolean SignIn(int Reserve_id);
-    boolean LineUp(int Reserve_id);
+    boolean SignIn(String Patient_id);
+    boolean LineUp(String Patient_id);
 
     boolean UpdateQueue(QueueInfo queueInfo);
 

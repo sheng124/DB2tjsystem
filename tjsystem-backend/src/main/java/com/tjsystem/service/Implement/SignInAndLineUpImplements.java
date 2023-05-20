@@ -16,31 +16,29 @@ public class SignInAndLineUpImplements implements SignInAndLineUpService {
     private SignInAndLineUpMapper signInAndLineUpMapper;
 
     @Override
-    public boolean SignIn(int Reserve_id)
+    public boolean SignIn(String Patient_id)
     {
-        return signInAndLineUpMapper.SignIn(Reserve_id);
+        return signInAndLineUpMapper.SignIn(Patient_id);
     }
 
     @Override
-    public boolean LineUp(int Reserve_id)
+    public boolean LineUp(String Patient_id)
     {
         List<String> Departments;
-        Departments = signInAndLineUpMapper.Department_idForLineUp(Reserve_id);
+        Departments = signInAndLineUpMapper.Department_idForLineUp(Patient_id);
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
         // 获取当前时间
         Date now = new Date();
         // 使用 SimpleDateFormat 对象将当前时间格式化为字符串
         String formattedTime = sdf.format(now);
 
-        return signInAndLineUpMapper.JoinQueue(signInAndLineUpMapper.Patient_idForLineUp(Reserve_id), Departments.get(0)
-                , formattedTime,Reserve_id);
+        return signInAndLineUpMapper.JoinQueue(Patient_id, Departments.get(0), formattedTime);
     }
 
     @Override
     public boolean UpdateQueue(QueueInfo queueInfo){
-        int reserve_id = signInAndLineUpMapper.getReserve_id(queueInfo.getPatient_id());
         List<String> Departments;
-        Departments = signInAndLineUpMapper.Department_idForLineUp(reserve_id);
+        Departments = signInAndLineUpMapper.Department_idForLineUp(queueInfo.getPatient_id());
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
         // 获取当前时间
         Date now = new Date();
