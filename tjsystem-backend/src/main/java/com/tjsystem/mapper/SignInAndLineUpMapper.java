@@ -11,9 +11,9 @@ public interface SignInAndLineUpMapper {
             "               where \"Order_date\" = '2023-05-13' and \"Order_patient-id\" = #{Patient_id};")
     boolean SignIn(String Patient_id);
 
-    //查找拥有该预约ID的病人ID
-    @Select("select reserve_patient_id from reservation where reserve_id = #{Reserve_id};")
-    String Patient_idForLineUp(int Reserve_id);
+    //查找医生所在的科室id
+    @Select("select \"Doctor_department-id\" from \"Doctor\" where \"Doctor_id\" = #{Doctor_id};")
+    String Department_idForUpdate(String Doctor_id);
 
     //查找预约ID对应的套餐的科室排序
     @Select("select distinct \"Project_department-id\" from \"Order\",\"Combo-Project\",\"Project\"\n" +

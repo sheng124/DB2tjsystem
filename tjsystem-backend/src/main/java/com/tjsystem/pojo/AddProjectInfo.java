@@ -1,8 +1,8 @@
 package com.tjsystem.pojo;
 
-public class QueueInfo {
+public class AddProjectInfo {
     private String patient_id;
-    private String doctor_id;
+    private String project_name;
 
     public String getPatient_id() {
         return patient_id;
@@ -12,11 +12,12 @@ public class QueueInfo {
         this.patient_id = patient_id;
     }
 
-    public String getDoctor_id() {
-        return doctor_id;
+    public String getProject_name() {
+        return project_name;
     }
 
-    public void setDoctor_id(String doctor_id) {
-        this.doctor_id = doctor_id;
+    public void setProject_name(String project_name) {
+        this.project_name = project_name;
     }
+
 }

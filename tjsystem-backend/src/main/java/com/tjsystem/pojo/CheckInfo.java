@@ -4,6 +4,8 @@ import java.util.List;
 
 public class CheckInfo {
     private String project_name;
+
+    private double project_price;
     private List<String> Indicators;
 
     public List<String> getIndicators() {
@@ -20,5 +22,13 @@ public class CheckInfo {
 
     public void setProject_name(String project_name) {
         this.project_name = project_name;
+    }
+
+    public double getProject_price() {
+        return project_price;
+    }
+
+    public void setProject_price(double project_price) {
+        this.project_price = project_price;
     }
 }

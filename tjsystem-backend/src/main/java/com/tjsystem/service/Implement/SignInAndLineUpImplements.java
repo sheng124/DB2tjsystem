@@ -44,7 +44,7 @@ public class SignInAndLineUpImplements implements SignInAndLineUpService {
         Date now = new Date();
         // 使用 SimpleDateFormat 对象将当前时间格式化为字符串
         String formattedTime = sdf.format(now);
-        int index = Departments.indexOf(queueInfo.getCurrent_department_id());
+        int index = Departments.indexOf(signInAndLineUpMapper.Department_idForUpdate(queueInfo.getDoctor_id()));
         if(index == Departments.size()-1)
             return signInAndLineUpMapper.CheckOver(queueInfo.getPatient_id());
         else

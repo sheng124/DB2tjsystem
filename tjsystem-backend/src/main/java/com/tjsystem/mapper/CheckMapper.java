@@ -35,6 +35,10 @@ public interface CheckMapper {
             "where \"Project_id\" = #{Project_id};")
     String getProjectName(String Project_id);
 
+    @Select("select \"Project_price\" from \"Project\"\n" +
+            "where \"Project_id\" = #{Project_id};")
+    double getProjectPrice(String Project_id);
+
     //获取当前病人该项目中所需检查的指标信息
     @Select("select \"Indicator_name\" from \"Indicator\" where \"Indicator_project-id\" = #{Project_id};")
     List<String> getIndicators(String Project_id);

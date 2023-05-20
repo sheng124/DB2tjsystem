@@ -34,7 +34,7 @@ public class SignInAndLineUpController {
     @PostMapping("/UpdateQueue")
     public Result UpdateQueue(@RequestBody QueueInfo queueInfo)
     {
-        System.out.println("获取到的数据："+queueInfo.getPatient_id()+" "+queueInfo.getCurrent_department_id());
+        System.out.println("获取到的数据："+queueInfo.getPatient_id()+" "+queueInfo.getDoctor_id());
         boolean result = signInAndLineUpService.UpdateQueue(queueInfo);
         if(result)
         {
