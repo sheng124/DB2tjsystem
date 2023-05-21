@@ -30,7 +30,7 @@ public class UploadController {
         }
     }
 
-    @PutMapping("/UploadFormData")
+    @PutMapping("/uploadFormData")
     public Result uploadFormData(@RequestBody UploadResultInfo uploadResultInfo){
         //调用Service获取查询结果
         System.out.println("获取到的数据："+uploadResultInfo);
