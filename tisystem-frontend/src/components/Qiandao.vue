@@ -2,11 +2,12 @@
  * @Author: wyh 1370804207@qq.com
  * @Date: 2023-05-16 13:15:54
  * @LastEditors: wyh 1370804207@qq.com
- * @LastEditTime: 2023-05-17 18:25:11
+ * @LastEditTime: 2023-05-21 16:43:15
  * @FilePath: \tisystem-frontend\src\components\Qiandao.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
+
   <el-table
     :data="tableData"
     border
@@ -40,11 +41,26 @@
     <template slot-scope="scope">
       <el-button
         size="mini"
-        @click="handleCheck(scope.$index, scope.row)">签到</el-button>
+        @click="handleCheck(scope.$index, scope.row),centerDialogVisible = true">签到</el-button>
+        <el-dialog
+  title="提示"
+  :visible.sync="centerDialogVisible"
+  width="30%"
+  center>
+  <span>已签到成功！</span>
+  <span slot="footer" class="dialog-footer">
+    <el-button @click="centerDialogVisible = false">取 消</el-button>
+    <el-button type="primary" @click="centerDialogVisible = false">确 定</el-button>
+  </span>
+</el-dialog>
     </template>
   </el-table-column>
   </el-table>
+
+ 
+
 </template>
+
 <script>
 import axios from 'axios'
 export default {
@@ -54,7 +70,8 @@ export default {
       value:'100',
       ID:{
         id:3
-      }
+      },
+      centerDialogVisible : false
     }
   },
   mounted(){
@@ -64,6 +81,7 @@ export default {
     handleCheck(index, row) {
         console.log(index, row);
         this.sendID();
+        //centerDialogVisible = true
     },
     gettableData(){
         axios.get('http://localhost:8080/ReservePatient',{
