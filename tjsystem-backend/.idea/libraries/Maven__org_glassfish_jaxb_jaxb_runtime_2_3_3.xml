@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Maven: org.glassfish.jaxb:jaxb-runtime:2.3.3">
+  <library name="Maven: org.glassfish.jaxb:jaxb-runtime:2.3.3" type="java-imported">
+    <properties groupId="org.glassfish.jaxb" artifactId="jaxb-runtime" version="2.3.3" />
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/jaxb-runtime/2.3.3/jaxb-runtime-2.3.3.jar!/" />
     </CLASSES>

@@ -1,78 +1,120 @@
+<!--
+ * @Author: wyh 1370804207@qq.com
+ * @Date: 2023-05-16 13:15:54
+ * @LastEditors: wyh 1370804207@qq.com
+ * @LastEditTime: 2023-05-17 18:25:11
+ * @FilePath: \tisystem-frontend\src\components\Qiandao.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <template>
-    <el-table 
-      :data="tableData"
-      border
-      style="width: 100%">
-      <el-table-column
-        prop="name"
-        label="姓名"
-        width="180">
-      </el-table-column>
-      <el-table-column
-        prop="id"
-        label="编号"
-        width="180">
-      </el-table-column>
-      <el-table-column
-        prop="date"
-        label="日期"
-        width="180">
-      </el-table-column>
-      <el-table-column
-        prop="phone"
-        label="手机号码"
-        width="280">
-      </el-table-column>
-      <el-table-column
-        prop="gender"
-        label="性别"
-        width="180">
-      </el-table-column>
-      <el-table-column label="操作">
-      <template slot-scope="scope">
-        <el-button
-          size="mini"
-          @click="handleCheck(scope.$index, scope.row)">签到</el-button>
-      </template>
+  <el-table
+    :data="tableData"
+    border
+    style="width: 100%">
+    <el-table-column
+      prop="name"
+      label="姓名"
+      width="180">
     </el-table-column>
-    </el-table>
-  </template>
-  
-  <script>
-    export default {
-      data() {
-        return {
-          tableData: [{
-            "name": "欧阳小花",
-            "id": "0001",
-            "date": "2023-05-13",
-            "phone": "18888888888",
-            "gender": "女"
-        },
-        {
-            "name": "赵子龙",
-            "id": "0002",
-            "date": "2023-05-13",
-            "phone": "12134512545",
-            "gender": "男"
-        }],
-        value:'100'
-        }
-      },
-      methods:{
-        handleCheck(index, row) {
-            console.log(index, row);
-        }
+    <el-table-column
+      prop="id"
+      label="编号"
+      width="180">
+    </el-table-column>
+    <el-table-column
+      prop="date"
+      label="日期"
+      width="180">
+    </el-table-column>
+    <el-table-column
+      prop="phone"
+      label="手机号码"
+      width="280">
+    </el-table-column>
+    <el-table-column
+      prop="gender"
+      label="性别"
+      width="180">
+    </el-table-column>
+    <el-table-column label="操作">
+    <template slot-scope="scope">
+      <el-button
+        size="mini"
+        @click="handleCheck(scope.$index, scope.row)">签到</el-button>
+    </template>
+  </el-table-column>
+  </el-table>
+</template>
+<script>
+import axios from 'axios'
+export default {
+  data() {
+    return {
+      tableData: [],
+      value:'100',
+      ID:{
+        id:3
       }
-    //   methods:{
-    //     gettableData(){
-    //         this.$axios.post('http://localhost:8080/ReservePatient').then((res) => {
-    //             this.tableData = res.data;//把传回来数据赋给packData
+    }
+  },
+  mounted(){
+    this.gettableData()
+  },
+  methods:{
+    handleCheck(index, row) {
+        console.log(index, row);
+        this.sendID();
+    },
+    gettableData(){
+        axios.get('http://localhost:8080/ReservePatient',{
+          params:{
+            Reserve_date:'2023-05-13'
+          }
+        }).then((res) => {
+            //console.log(res.data)
+            this.tableData = res.data.data;//把传回来数据赋给packData
+            console.log(this.tableData)
+            //console.log(res.data)
+            //console.log(res.data.data)
+            //console.log(res.data.code)
 
-    //         }).catch(function(error){
-    //             console.log(error);
-    //         })
-    //     }
+            
+        }).catch(function(error){
+            console.log(error);
+        })
+    },
+
+    sendID(){
+      axios.post('http://localhost:8080/SignIn',JSON.stringify(this.ID),{
+        headers: {
+          'Content-Type': 'application/json;charset=UTF-8'
+	      }
+      }).then((res) => {
+
+      }).catch(function(error){
+        console.log(error)
+      })
+    }
+
+  }
+} 
+  </script>
+
+
+        <!-- // sendID(){
+        //   axios.post('http://localhost:8080/SignIn',{
+        //     params:{
+
+        //     }
+        //   }).then((res) => {
+               
+        //     }).catch(function(error){
+        //         console.log(error);
+        //     })
+        // }
+      //}
+    //   methods:{
+    
     //   }
 
 //       mounted() {
@@ -93,6 +135,4 @@
 //           }
 //         );
 //     },
-//    }
-    }
-  </script>
+//    } -->

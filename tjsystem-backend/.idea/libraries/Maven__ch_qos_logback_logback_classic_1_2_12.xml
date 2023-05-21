@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Maven: ch.qos.logback:logback-classic:1.2.12">
+  <library name="Maven: ch.qos.logback:logback-classic:1.2.12" type="java-imported">
+    <properties groupId="ch.qos.logback" artifactId="logback-classic" version="1.2.12" />
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.12/logback-classic-1.2.12.jar!/" />
     </CLASSES>

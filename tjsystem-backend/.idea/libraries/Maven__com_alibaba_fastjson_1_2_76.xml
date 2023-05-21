@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Maven: com.alibaba:fastjson:1.2.76">
+  <library name="Maven: com.alibaba:fastjson:1.2.76" type="java-imported">
+    <properties groupId="com.alibaba" artifactId="fastjson" version="1.2.76" />
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.76/fastjson-1.2.76.jar!/" />
     </CLASSES>
