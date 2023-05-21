@@ -35,8 +35,8 @@
             <i class="el-icon-location" />
             <span slot="title">体检管理</span>
           </template>
-          <el-menu-item index="2-1">检查</el-menu-item>
-          <el-menu-item index="2-2">上传结果</el-menu-item>
+          <el-menu-item index="/tjManage01">检查</el-menu-item>
+          <el-menu-item index="/tjManage02">上传结果</el-menu-item>
         </el-submenu>
 
         <el-submenu index="3">
