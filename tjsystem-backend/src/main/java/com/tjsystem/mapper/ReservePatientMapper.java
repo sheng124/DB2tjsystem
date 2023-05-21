@@ -10,14 +10,14 @@ import java.util.List;
 
 @Mapper
 public interface ReservePatientMapper {
-    @Select("select reserve_id,\"Patient_name\",\"Patient_gender\",\"Patient_phone\",\"reserve_date\" from \"Patient\",reservation\n" +
-            "where reserve_date = #{Reserve_Date} and reserve_patient_id = \"Patient_id\" and isCheck = false;")
+    @Select("select distinct \"Order_patient-id\",\"Patient_name\",\"Patient_gender\",\"Patient_phone\",\"Order_date\" from \"Patient\",\"Order\"\n" +
+            "where \"Order_date\" = #{Reserve_date} and \"Order_patient-id\" = \"Patient_id\" and \"Order_ischeck\" = false;")
     @Results(id = "patientResultMap", value = {
-            @Result(property = "Reserve_id", column = "reserve_id"),
+            @Result(property = "Patient_id", column = "Order_patient-id"),
             @Result(property = "Patient_name", column = "Patient_name"),
             @Result(property = "Patient_gender", column = "Patient_gender"),
             @Result(property = "Patient_phone", column = "Patient_phone"),
-            @Result(property = "Reserve_date", column = "reserve_date")
+            @Result(property = "Reserve_date", column = "Order_date")
     })
     List<ReservePatient> getReservePatients(String Reserve_Date);
 

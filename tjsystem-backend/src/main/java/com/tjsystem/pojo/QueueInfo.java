@@ -1,22 +1,22 @@
 package com.tjsystem.pojo;
 
 public class QueueInfo {
-    private String Patient_id;
-    private String current_department_id;
+    private String patient_id;
+    private String doctor_id;
 
     public String getPatient_id() {
-        return Patient_id;
-    }
-
-    public String getCurrent_department_id() {
-        return current_department_id;
-    }
-
-    public void setCurrent_department_id(String current_department_id) {
-        this.current_department_id = current_department_id;
+        return patient_id;
     }
 
     public void setPatient_id(String patient_id) {
-        Patient_id = patient_id;
+        this.patient_id = patient_id;
+    }
+
+    public String getDoctor_id() {
+        return doctor_id;
+    }
+
+    public void setDoctor_id(String doctor_id) {
+        this.doctor_id = doctor_id;
     }
 }

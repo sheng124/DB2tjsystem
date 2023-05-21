@@ -1,15 +1,15 @@
 package com.tjsystem.pojo;
 
 public class ReservePatient {
-    private int Reserve_id;
+    private String Patient_id;
     private String Patient_name;
     private String Patient_gender;
     private String Patient_phone;
     private String Reserve_date;
 
-    public int getId()
+    public String getId()
     {
-        return Reserve_id;
+        return Patient_id;
     }
     public String getName()
     {
@@ -27,9 +27,9 @@ public class ReservePatient {
     {
         return Reserve_date;
     }
-    public void setReserve_id(int reserveId)
+    public void setReserve_id(String patient_id)
     {
-        this.Reserve_id = reserveId;
+        this.Patient_id = patient_id;
     }
     public void setPatient_name(String patientName)
     {

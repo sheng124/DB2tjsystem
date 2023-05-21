@@ -17,8 +17,8 @@ public class ReservePatientController {
     private ReservePatientService reservePatientService;
 
     @GetMapping("/ReservePatient")
-    public Result getReservePatient(String Reserve_date,String Reserve_time){
-        System.out.println("获取到的数据："+Reserve_date+" "+Reserve_time);
+    public Result getReservePatient(String Reserve_date){
+        System.out.println("获取到的数据："+Reserve_date);
         List<ReservePatient> result;
         result = reservePatientService.getAllReservePatients(Reserve_date);
         if(!result.isEmpty())

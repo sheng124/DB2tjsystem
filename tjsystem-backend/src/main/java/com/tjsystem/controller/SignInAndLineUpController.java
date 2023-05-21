@@ -14,13 +14,12 @@ public class SignInAndLineUpController {
     private SignInAndLineUpService signInAndLineUpService;
 
     @PostMapping("/SignIn")
-    public Result SignIn(@RequestBody int Reserve_id){
-        System.out.println("获取到的数据："+Reserve_id);
-        System.out.println("-------------------------------------");
-        boolean result1 = signInAndLineUpService.SignIn(Reserve_id);
+    public Result SignIn(@RequestBody String Patient_id){
+        System.out.println("获取到的数据："+Patient_id);
+        boolean result1 = signInAndLineUpService.SignIn(Patient_id);
         if(result1)
         {
-            boolean result2 = signInAndLineUpService.LineUp(Reserve_id);
+            boolean result2 = signInAndLineUpService.LineUp(Patient_id);
             if(result2)
             {
                 return Result.success();
@@ -35,7 +34,7 @@ public class SignInAndLineUpController {
     @PostMapping("/UpdateQueue")
     public Result UpdateQueue(@RequestBody QueueInfo queueInfo)
     {
-        System.out.println("获取到的数据："+queueInfo.getPatient_id()+" "+queueInfo.getCurrent_department_id());
+        System.out.println("获取到的数据："+queueInfo.getPatient_id()+" "+queueInfo.getDoctor_id());
         boolean result = signInAndLineUpService.UpdateQueue(queueInfo);
         if(result)
         {

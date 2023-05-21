@@ -48,8 +48,8 @@ service.interceptors.response.use(
     // if the custom code is not 1, it is judged as an error.
     if (res.code !== 1) {
       Message({
-        message: res.message || 'Error',
-        type: 'error',
+        message: res.msg || 'Error',
+        type: 'info',
         duration: 5 * 1000
       })
 
