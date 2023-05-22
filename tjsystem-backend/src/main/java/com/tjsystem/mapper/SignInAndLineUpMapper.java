@@ -8,7 +8,7 @@ import java.util.List;
 public interface SignInAndLineUpMapper {
     //签到（根据预约ID设置isCheck=true)
     @Update("update \"Order\" set \"Order_ischeck\" = true \n" +
-            "               where \"Order_date\" = '2023-05-13' and \"Order_patient-id\" = #{Patient_id};")
+            "               where \"Order_date\" = '2023-05-21' and \"Order_patient-id\" = #{Patient_id};")
     boolean SignIn(String Patient_id);
 
     //查找医生所在的科室id

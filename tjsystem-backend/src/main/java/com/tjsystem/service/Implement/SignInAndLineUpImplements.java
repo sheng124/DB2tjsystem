@@ -26,13 +26,17 @@ public class SignInAndLineUpImplements implements SignInAndLineUpService {
     {
         List<String> Departments;
         Departments = signInAndLineUpMapper.Department_idForLineUp(Patient_id);
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-        // 获取当前时间
-        Date now = new Date();
-        // 使用 SimpleDateFormat 对象将当前时间格式化为字符串
-        String formattedTime = sdf.format(now);
+        if(Departments.isEmpty())
+            return false;
+        else{
+            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+            // 获取当前时间
+            Date now = new Date();
+            // 使用 SimpleDateFormat 对象将当前时间格式化为字符串
+            String formattedTime = sdf.format(now);
 
-        return signInAndLineUpMapper.JoinQueue(Patient_id, Departments.get(0), formattedTime);
+            return signInAndLineUpMapper.JoinQueue(Patient_id, Departments.get(0), formattedTime);
+        }
     }
 
     @Override

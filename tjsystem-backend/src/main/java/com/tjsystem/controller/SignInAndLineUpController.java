@@ -14,7 +14,8 @@ public class SignInAndLineUpController {
     private SignInAndLineUpService signInAndLineUpService;
 
     @PostMapping("/SignIn")
-    public Result SignIn(@RequestBody String Patient_id){
+    public Result SignIn(@RequestBody String patient_id){
+        String Patient_id = patient_id.substring(7,11);
         System.out.println("获取到的数据："+Patient_id);
         boolean result1 = signInAndLineUpService.SignIn(Patient_id);
         if(result1)

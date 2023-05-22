@@ -2,7 +2,7 @@
  * @Author: wyh 1370804207@qq.com
  * @Date: 2023-05-16 13:15:54
  * @LastEditors: wyh 1370804207@qq.com
- * @LastEditTime: 2023-05-21 16:43:15
+ * @LastEditTime: 2023-05-21 18:44:11
  * @FilePath: \tisystem-frontend\src\components\Qiandao.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -80,13 +80,15 @@ export default {
   methods:{
     handleCheck(index, row) {
         console.log(index, row);
-        this.sendID();
+        this.changeID(index);
+        this.sendID(index);
         //centerDialogVisible = true
+        //console.log(this.dateFormat());
     },
     gettableData(){
         axios.get('http://localhost:8080/ReservePatient',{
           params:{
-            Reserve_date:'2023-05-13'
+            Reserve_date:this.dateFormat()
           }
         }).then((res) => {
             //console.log(res.data)
@@ -102,16 +104,32 @@ export default {
         })
     },
 
-    sendID(){
+    sendID(index){
       axios.post('http://localhost:8080/SignIn',JSON.stringify(this.ID),{
         headers: {
           'Content-Type': 'application/json;charset=UTF-8'
 	      }
       }).then((res) => {
+        console.log(this.tableData[index].id)
+        console.log(this.ID.id)
 
       }).catch(function(error){
         console.log(error)
       })
+    },
+    dateFormat(){
+      var date = new Date()
+      var year = date.getFullYear()
+      var month = date.getMonth() + 1 < 10 ? 
+                    '0' + (date.getMonth() + 1) : date.getMonth()+ 1
+      var day = date.getDate() < 10 ? '0' + date.getDate() : date.getDate()
+      // var hours = date.getHours() < 10 ? '0' + date.getHours() : date.getHours()
+      // var minutes = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()
+      // var seconds = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds()
+      return year + '-' +month + '-' + day
+    },
+    changeID(index){
+        this.ID.id=this.tableData[index].id;
     }
 
   }
