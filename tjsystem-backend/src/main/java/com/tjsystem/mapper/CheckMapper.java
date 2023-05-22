@@ -21,7 +21,7 @@ public interface CheckMapper {
     //获取当前病人在该科室所需检查的项目信息
     @Select("select distinct \"Project_id\" from \"Order\",\"Combo-Project\",\"Project\"\n" +
             "where \"Order_patient-id\" = #{Patient_id}\n" +
-            "  and \"Order_date\" = '2023-05-13'\n" +
+            "  and \"Order_date\" = '2023-05-21'\n" +
             "  and \"Project_department-id\" = #{Department_id}\n" +
             "  and ((\"Order_project/combo-id\" = \"Combo-Project_combo-id\"\n" +
             "       and \"Combo-Project_project-id\" = \"Project_id\" )\n" +
@@ -40,8 +40,10 @@ public interface CheckMapper {
     double getProjectPrice(String Project_id);
 
     //获取当前病人该项目中所需检查的指标信息
-    @Select("select \"Indicator_name\" from \"Indicator\" where \"Indicator_project-id\" = #{Project_id};")
-    List<String> getIndicators(String Project_id);
+    @Select("select \"Indicator_name\" from \"Indicator\" where \"Indicator_project-id\" = #{Project_id}\n" +
+            "and \"Indicator_name\" not in(select \"Result_indicator-name\" \n" +
+            "from \"Result\" where \"Result_patient-id\" = #{Patient_id});")
+    List<String> getIndicators(String Project_id,String Patient_id);
 
     //检查完成后更新待上传结果
     @Insert("insert into \"Result\" values (#{patient_id},#{indicator_name},null,#{doctor_id},#{date});")

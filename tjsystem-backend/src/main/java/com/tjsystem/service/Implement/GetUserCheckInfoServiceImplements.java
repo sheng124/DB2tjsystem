@@ -25,7 +25,7 @@ public class GetUserCheckInfoServiceImplements implements GetUserCheckInfoServic
         for (String Project : Projects) {
             CheckInfo temp = new CheckInfo();
             temp.setProject_name(checkMapper.getProjectName(Project));
-            temp.setIndicators(checkMapper.getIndicators(Project));
+            temp.setIndicators(checkMapper.getIndicators(Project,Patient_id));
             temp.setProject_price(checkMapper.getProjectPrice(Project));
             checkInfos.add(temp);
         }

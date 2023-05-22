@@ -1,3 +1,19 @@
+/*
+ * @Author: wyh 1370804207@qq.com
+ * @Date: 2023-05-13 11:35:58
+ * @LastEditors: wyh 1370804207@qq.com
+ * @LastEditTime: 2023-05-21 16:53:16
+ * @FilePath: \tisystem-frontend\src\router\index.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
+/*
+ * @Author: wyh 1370804207@qq.com
+ * @Date: 2023-05-13 11:35:58
+ * @LastEditors: wyh 1370804207@qq.com
+ * @LastEditTime: 2023-05-16 11:54:17
+ * @FilePath: \tisystem-frontend\src\router\index.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import Vue from 'vue'
 import Router from 'vue-router'
 
@@ -6,6 +22,10 @@ Vue.use(Router)
 /* Layout */
 import Layout from '@/layout'
 
+import Shouye from '../components/Shouye'
+import Qiandao from '../components/Qiandao'
+import OneManage from '../components/OneManage'
+import PackageManage from '../components/PackageManage'
 /**
  * Note: sub-menu only appear when route children.length >= 1
  * Detail see: https://panjiachen.github.io/vue-element-admin-site/guide/essentials/router-and-nav.html
@@ -54,13 +74,53 @@ export const constantRoutes = [
       meta: { title: 'Dashboard', icon: 'dashboard' }
     }]
   },
-
   // 404 page must be placed at the end !!!
+  { path: '*', redirect: '/404', hidden: true },
+   
   {
-    path: '*',
-    redirect: '/404',
-    hidden: true },
-
+    path: '/Shouye',
+    component: Layout,
+    redirect: '/Shouye',
+    children: [{
+      path: '/Shouye',
+      name: 'Shouye',
+      component:Shouye,
+      meta: { title: 'Shouye', icon: 'dashboard' }
+    }]
+  },
+  {
+    path: '/Qiandao',
+    component: Layout,
+    redirect: '/Qiandao',
+    children: [{
+      path: '/Qiandao',
+      name: 'Qiandao',
+      component:Qiandao,
+      meta: { title: 'Qiandao', icon: 'dashboard' }
+    }]
+  },
+  {
+    path: '/OneManage',
+    component: Layout,
+    redirect: '/OneManage',
+    children: [{
+      path: '/OneManage',
+      name: 'OneManage',
+      component:OneManage,
+      meta: { title: 'OneManage', icon: 'dashboard' }
+    }]
+  },
+  {
+    path: '/PackageManage',
+    component: Layout,
+    redirect: '/PackageManage',
+    children: [{
+      path: '/PackageManage',
+      name: 'PackageManage',
+      component:PackageManage,
+      meta: { title: 'PackageManage', icon: 'dashboard' }
+    }]
+  },
   {
     path: '/tjManage01',
     redirect: '/check',
