@@ -21,12 +21,12 @@ public interface CheckMapper {
     //获取当前病人在该科室所需检查的项目信息
     @Select("select distinct \"Project_id\" from \"Order\",\"Combo-Project\",\"Project\"\n" +
             "where \"Order_patient-id\" = #{Patient_id}\n" +
-            "  and \"Order_date\" = '2023-05-21'\n" +
+            "  and \"Order_date\" = #{Order_date}\n" +
             "  and \"Project_department-id\" = #{Department_id}\n" +
             "  and ((\"Order_project/combo-id\" = \"Combo-Project_combo-id\"\n" +
             "       and \"Combo-Project_project-id\" = \"Project_id\" )\n" +
             "           or \"Order_project/combo-id\" = \"Project_id\");")
-    List<String> getProjects(String Patient_id,String Department_id);
+    List<String> getProjects(String Patient_id,String Department_id,String Order_date);
 
     @Select("select \"Patient_name\" from \"Patient\" where \"Patient_id\" = #{Patient_id};")
     String getPatientName(String Patient_id);

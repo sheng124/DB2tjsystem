@@ -21,7 +21,12 @@ public class AddProjectsServiceImplements implements AddProjectsService {
     @Override
     public List<CheckInfo> getProjectsToAdd(String patient_id, String doctor_id) {
         String Department_id = addProjectsMapper.getDepartment_id(doctor_id);
-        List<String> Projects = addProjectsMapper.getProjectsToAdd(patient_id, Department_id);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        // 获取当前时间
+        Date now = new Date();
+        // 使用 SimpleDateFormat 对象将当前时间格式化为字符串
+        String formattedTime = sdf.format(now);
+        List<String> Projects = addProjectsMapper.getProjectsToAdd(patient_id, Department_id,formattedTime);
         List<CheckInfo> checkInfos = new ArrayList<>();
         for (String Project : Projects) {
             CheckInfo temp = new CheckInfo();
