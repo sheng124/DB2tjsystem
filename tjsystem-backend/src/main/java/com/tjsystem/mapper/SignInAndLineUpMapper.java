@@ -8,8 +8,8 @@ import java.util.List;
 public interface SignInAndLineUpMapper {
     //签到（根据预约ID设置isCheck=true)
     @Update("update \"Order\" set \"Order_ischeck\" = true \n" +
-            "               where \"Order_date\" = '2023-05-21' and \"Order_patient-id\" = #{Patient_id};")
-    boolean SignIn(String Patient_id);
+            "               where \"Order_date\" = #{Order_date} and \"Order_patient-id\" = #{Patient_id};")
+    boolean SignIn(String Patient_id,String Order_date);
 
     //查找医生所在的科室id
     @Select("select \"Doctor_department-id\" from \"Doctor\" where \"Doctor_id\" = #{Doctor_id};")
@@ -18,12 +18,12 @@ public interface SignInAndLineUpMapper {
     //查找预约ID对应的套餐的科室排序
     @Select("select distinct \"Project_department-id\" from \"Order\",\"Combo-Project\",\"Project\"\n" +
             "where \"Order_patient-id\" = #{Patient_id}\n" +
-            "  and \"Order_date\" = '2023-05-13'\n" +
+            "  and \"Order_date\" = #{Order_date}\n" +
             "  and ((\"Order_project/combo-id\" = \"Combo-Project_combo-id\"\n" +
             "       and \"Combo-Project_project-id\" = \"Project_id\" )\n" +
             "           or \"Order_project/combo-id\" = \"Project_id\")\n" +
             "order by \"Project_department-id\";")
-    List<String> Department_idForLineUp(String Patient_id);
+    List<String> Department_idForLineUp(String Patient_id,String Order_date);
 
     //将签到完成的病人加入第一个科室等候队列
     @Insert("insert into \"Lineup\" values (#{Patient_id},#{Department_id},#{time}::time);")

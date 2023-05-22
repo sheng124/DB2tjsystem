@@ -17,12 +17,12 @@ public interface AddProjectsMapper {
     @Select("select distinct \"Project_id\" from \"Project\" where \"Project_department-id\" = #{Department_id}\n" +
             "and \"Project_id\" not in(select distinct \"Project_id\" from \"Order\",\"Combo-Project\",\"Project\"\n" +
             "where \"Order_patient-id\" = #{Patient_id}\n" +
-            "  and \"Order_date\" = '2023-05-21'\n" +
+            "  and \"Order_date\" = #{Order_date}\n" +
             "  and \"Project_department-id\" = #{Department_id}\n" +
             "  and ((\"Order_project/combo-id\" = \"Combo-Project_combo-id\"\n" +
             "       and \"Combo-Project_project-id\" = \"Project_id\" )\n" +
             "           or \"Order_project/combo-id\" = \"Project_id\"));")
-    List<String> getProjectsToAdd(String Patient_id, String Department_id);
+    List<String> getProjectsToAdd(String Patient_id, String Department_id,String Order_date);
 
     //获取项目名称
     @Select("select \"Project_name\" from \"Project\"\n" +
