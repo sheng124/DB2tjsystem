@@ -2,7 +2,7 @@
  * @Author: wyh 1370804207@qq.com
  * @Date: 2023-05-16 11:51:27
  * @LastEditors: wyh 1370804207@qq.com
- * @LastEditTime: 2023-05-16 17:04:44
+ * @LastEditTime: 2023-05-22 20:33:19
  * @FilePath: \tisystem-frontend\src\layout\components\Sidebar\index.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -39,14 +39,14 @@
           <el-menu-item index="/tjManage02">上传结果</el-menu-item>
         </el-submenu>
 
-        <el-submenu index="3">
+        <!-- <el-submenu index="3">
           <template slot="title">
             <i class="el-icon-location" />
             <span slot="title">项目管理</span>
           </template>
           <el-menu-item index="/OneManage">单项管理</el-menu-item>
           <el-menu-item index="/PackageManage">套餐管理</el-menu-item>
-        </el-submenu>
+        </el-submenu> -->
 
 
       </el-menu>

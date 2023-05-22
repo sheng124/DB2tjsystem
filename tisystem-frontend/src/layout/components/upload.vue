@@ -145,6 +145,7 @@ export default {
       console.log(this.formData)
       UploadFormData(this.formData).then(response => {
         console.log(response)
+        this.formData.checkResult=''
       })
     }
   }

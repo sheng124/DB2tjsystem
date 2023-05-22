@@ -1,8 +1,9 @@
 <template>
   <div>
     <el-row type="flex" align="middle">
-      <el-col :span="5"><h1>用户ID:{{ patient_id }}</h1></el-col>
-      <el-col :span="15"><h1>用户姓名:{{ patient_name }}</h1></el-col>
+      <el-col :span="6"><h1>用户ID:{{ patient_id }}</h1></el-col>
+      <el-col :span="7"><h1>用户姓名:{{ patient_name }}</h1></el-col>
+      <el-col :span="7"><h1>当前科室:{{ ksName }}</h1></el-col>
       <el-col :span="4">
         <el-button type="primary" icon="el-icon-plus" @click="getProjects">增加体检项目</el-button>
       </el-col>
@@ -120,10 +121,12 @@
 <script>
 import { getCheckInfo, setCheckState, updateQueue, addProjects, addProject } from '@/api/user'
 import store from '@/store'
+import { thisExpression } from '@babel/types'
 export default {
   data() {
     return {
       doctorID: store.getters.name,
+      ksName: '',
       patient_id: '0001',
       patient_name: '欧阳小花',
       userCheckData: [],
@@ -195,6 +198,12 @@ export default {
         checkInfos.forEach(this.dispatchDataFirst)
         console.log(checkInfos)
         console.log(this.userCheckData)
+        //科室
+        if(this.doctorID === 'D0003'){
+          this.ksName = '肠胃肝脏科'
+        } else{
+          this.ksName = '血液内科'
+        }
       })
     },
     dispatchDataSecond_dialog(value) {

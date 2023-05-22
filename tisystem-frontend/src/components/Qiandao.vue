@@ -2,7 +2,7 @@
  * @Author: wyh 1370804207@qq.com
  * @Date: 2023-05-16 13:15:54
  * @LastEditors: wyh 1370804207@qq.com
- * @LastEditTime: 2023-05-21 18:44:11
+ * @LastEditTime: 2023-05-22 22:12:28
  * @FilePath: \tisystem-frontend\src\components\Qiandao.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -50,7 +50,7 @@
   <span>已签到成功！</span>
   <span slot="footer" class="dialog-footer">
     <el-button @click="centerDialogVisible = false">取 消</el-button>
-    <el-button type="primary" @click="centerDialogVisible = false">确 定</el-button>
+    <el-button type="primary" @click="queren">确 定</el-button>
   </span>
 </el-dialog>
     </template>
@@ -84,6 +84,10 @@ export default {
         this.sendID(index);
         //centerDialogVisible = true
         //console.log(this.dateFormat());
+    },
+    queren(){
+      this.centerDialogVisible = false;
+      this.$router.go(0);
     },
     gettableData(){
         axios.get('http://localhost:8080/ReservePatient',{

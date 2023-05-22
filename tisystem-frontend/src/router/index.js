@@ -2,7 +2,7 @@
  * @Author: wyh 1370804207@qq.com
  * @Date: 2023-05-13 11:35:58
  * @LastEditors: wyh 1370804207@qq.com
- * @LastEditTime: 2023-05-21 16:53:16
+ * @LastEditTime: 2023-05-22 21:19:25
  * @FilePath: \tisystem-frontend\src\router\index.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -71,7 +71,7 @@ export const constantRoutes = [
       path: 'dashboard',
       name: 'Dashboard',
       component: () => import('@/views/dashboard/index'),
-      meta: { title: 'Dashboard', icon: 'dashboard' }
+      meta: { title: '体检系统', icon: 'dashboard' }
     }]
   },
   // 404 page must be placed at the end !!!
@@ -85,7 +85,7 @@ export const constantRoutes = [
       path: '/Shouye',
       name: 'Shouye',
       component:Shouye,
-      meta: { title: 'Shouye', icon: 'dashboard' }
+      meta: { title: '首页', icon: 'dashboard' }
     }]
   },
   {
@@ -96,7 +96,7 @@ export const constantRoutes = [
       path: '/Qiandao',
       name: 'Qiandao',
       component:Qiandao,
-      meta: { title: 'Qiandao', icon: 'dashboard' }
+      meta: { title: '签到', icon: 'dashboard' }
     }]
   },
   {
@@ -129,7 +129,7 @@ export const constantRoutes = [
       path: '/check',
       name: 'check',
       component: () => import('@/layout/components/check.vue'),
-      meta: { title: 'Check', icon: 'dashboard' }
+      meta: { title: '检查', icon: 'dashboard' }
     }]
   },
   {
@@ -140,7 +140,7 @@ export const constantRoutes = [
       path: '/upload',
       name: 'upload',
       component: () => import('@/layout/components/upload.vue'),
-      meta: { title: 'upload', icon: 'dashboard' }
+      meta: { title: '上传结果', icon: 'dashboard' }
     }]
   }
 ]
